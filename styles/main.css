@@ -13,12 +13,13 @@
   --text-color-disabled: #cacaca;
   --google-blue: #4285f4;
 
+  --font-size-main: 14px;
 }
 
 html {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
-  font-size: 18px;
+  font-size: var(--font-size-main);
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
@@ -41,7 +42,7 @@ body {
   border: 2px solid var(--border-color-main);
   border-radius: 12px;
   width: min-content;
-  padding: 50px;
+  padding: 25px;
   background: var(--background-card-color-main);
 }
 
@@ -85,7 +86,7 @@ body {
   padding: 10px 15px;
   background-color: transparent;
   color: var(--text-color-main);
-  font-size: 18px;
+  font-size: var(--font-size-main);
   font-weight: 400;
   font-family: inherit;
   -webkit-appearance: none;
@@ -98,6 +99,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: space-between;
 }
 
 .button {
@@ -129,7 +131,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
-  font-size: 18px;
+  font-size: var(--font-size-main);
   font-family: inherit;
   font-weight: 400;
 }
@@ -148,3 +150,6 @@ body {
     min-width: 340px;
   }
 }
+
+/* youtube-clone */
+
