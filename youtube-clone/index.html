@@ -8,40 +8,74 @@
   </head>
   <body>
     <header>
-      <article></article>
-      <article>
-        <div></div>
-        <div></div>
-      </article>
-      <section>
-        <section></section>
-        <section></section>
-        <section></section>
-      </section>
+      <!-- Logo -->
+      <div class="youtube-logo-wrapper"></div>
+
+      <!-- Search Section -->
+      <form class="search-form">
+        <input type="search" placeholder="Search" class="search-input" />
+        <button class="search-button"></button>
+        <button class="voice-search"></button>
+      </form>
+
+      <!-- Creative Navigation -->
+      <div class="profile-nav" aria-label="User actions">
+        <button class="create"></button>
+        <button class="notifications"></button>
+        <button class="profile-avatar"></button>
+      </div>
     </header>
-    <aside>
-      <nav>
-        <button></button>
-        <ol>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ol>
-      </nav>
-    </aside>
+
+    <!-- Sidebar with main navigation -->
+    <nav class="main-sidebar-nav">
+      <button class="burger-menu"></button>
+      <ul class="navigation">
+        <li class="home"><a href="#">Home</a></li>
+        <li class="shorts"><a href="#">Shorts</a></li>
+        <li class="you"><a href="#">You</a></li>
+      </ul>
+    </nav>
+
+    <!-- Tags -->
     <main>
-      <section></section>
-      <section>
-        <article>
-          <section>
-            <section>
-              <section></section>
-              <section></section>
-            </section>
-            <section></section>
-          </section>
-          <div></div>
+      <nav class="tags-nav" aria-label="Video filters">
+        <ul class="tags-list">
+          <li><button class="tag">All</button></li>
+          <li><button class="tag">Gaming</button></li>
+          <li><button class="tag">Laptops</button></li>
+          <li><button class="tag">Linux</button></li>
+          <li><button class="tag">Apple</button></li>
+          <li><button class="tag">Music</button></li>
+          <li><button class="tag">Mixes</button></li>
+          <li><button class="tag">Mods</button></li>
+          <li><button class="tag">Computer programming</button></li>
+          <li><button class="tag">Video game walkthroughs</button></li>
+          <li><button class="tag">Memes</button></li>
+          <li><button class="tag">indie games</button></li>
+          <li><button class="tag">Recently uploaded</button></li>
+          <li><button class="tag">Watched</button></li>
+          <li><button class="tag">New to you</button></li>
+        </ul>
+      </nav>
+
+      <!-- Videos -->
+      <section class="video-wrapper">
+        <article class="video-card">
+
+          <div class="video-preview"></div>
+
+          <footer class="video-details">
+            <div class="author-avatar"></div>
+            <div class="video-info">
+              <h2 class="video-name">Video Title</h2>
+              <p class="video-author">Channel Name</p>
+              <p class="video-metadata">
+                <span class="video-views">50.2K views</span>
+                <span class="video-time">week ago</span>
+              </p>
+            </div>
+            <div class="video-menu-button"></div>
+          </footer>
         </article>
       </section>
     </main>
