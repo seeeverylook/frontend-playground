@@ -13,6 +13,9 @@
     />
   </head>
   <body>
+    <!-- Frosted glass -->
+    <div class="frosted-glass"></div>
+
     <!-- Burger - logo menu -->
     <header>
       <div class="start">
@@ -108,7 +111,7 @@
           </div>
         </button>
         <button class="search-button">
-          <div>
+          <div style="max-width: 24px">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24"
@@ -225,7 +228,9 @@
             </svg>
           </div>
         </button>
-        <button class="profile-avatar"></button>
+        <div class="profile-avatar-wrapper">
+          <button class="profile-avatar"></button>
+        </div>
       </div>
     </header>
 
@@ -233,9 +238,83 @@
       <!-- Sidebar with main navigation -->
       <nav class="main-sidebar-nav">
         <div class="navigation">
-          <a href="#" class="home">Home</a>
-          <a href="#" class="shorts">Shorts</a>
-          <a href="#" class="you">You</a>
+          <div class="icon-wrap">
+            <a href="#" class="icon">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="m11.485 2.143-8 4.8-2 1.2a1 1 0 001.03 1.714L3 9.567V20a2 2 0 002 2h5v-8h4v8h5a2 2 0 002-2V9.567l.485.29a1 1 0 001.03-1.714l-2-1.2-8-4.8a1 1 0 00-1.03 0Z"
+                  ></path>
+                </svg>
+              </div>
+              <span>Home</span>
+            </a>
+          </div>
+
+          <div class="icon-wrap">
+            <a href="#" class="icon">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="m13.467 1.19-8 4.7a5 5 0 00-.255 8.46 5 5 0 005.32 8.462l8-4.7a5 5 0 00.258-8.462 5 5 0 001.641-6.464l-.12-.217a5 5 0 00-6.844-1.78m5.12 2.79a2.999 2.999 0 01-1.067 4.107l-1.327.78a1 1 0 00.096 1.775l.943.423a3 3 0 01.288 5.323l-8 4.7a3 3 0 01-3.039-5.173l1.327-.78a1 1 0 00-.097-1.775l-.942-.423a3 3 0 01-.288-5.323l8-4.7a3 3 0 014.106 1.066ZM15 12l-5-3v6l5-3Z"
+                  ></path>
+                </svg>
+              </div>
+              <span>Shorts</span>
+            </a>
+          </div>
+
+          <div class="icon-wrap">
+            <a href="#" class="icon">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 016.447 15.276 7 7 0 00-12.895 0A9 9 0 0112 3Zm0 2a4 4 0 100 8 4 4 0 000-8Zm0 2a2 2 0 110 4 2 2 0 010-4Zm-.1 9.001L11.899 16a5 5 0 014.904 3.61A8.96 8.96 0 0112 21a8.96 8.96 0 01-4.804-1.391 5 5 0 014.704-3.608Z"
+                  ></path>
+                </svg>
+              </div>
+              <span>You</span>
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -260,73 +339,609 @@
 
       <!-- Videos -->
       <section class="video-grid">
+        
         <article class="video-card">
           <div class="video-preview"></div>
 
+          <div class="video-card-color"></div>
+
           <footer class="video-details">
             <div class="author-avatar"></div>
+
             <div class="video-info">
               <h2 class="video-name">Video Title</h2>
+
               <p class="video-author">Channel Name</p>
-              <p class="video-metadata">
-                <span class="video-views">50.2K views</span>
-                <span class="video-time">week ago</span>
-              </p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
             </div>
-            <div class="video-menu-button"></div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
           </footer>
         </article>
-
+        
         <article class="video-card">
           <div class="video-preview"></div>
 
+          <div class="video-card-color"></div>
+
           <footer class="video-details">
             <div class="author-avatar"></div>
+
             <div class="video-info">
               <h2 class="video-name">Video Title</h2>
+
               <p class="video-author">Channel Name</p>
-              <p class="video-metadata">
-                <span class="video-views">50.2K views</span>
-                <span class="video-time">week ago</span>
-              </p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
             </div>
-            <div class="video-menu-button"></div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
           </footer>
         </article>
-
+        
         <article class="video-card">
           <div class="video-preview"></div>
 
+          <div class="video-card-color"></div>
+
           <footer class="video-details">
             <div class="author-avatar"></div>
+
             <div class="video-info">
               <h2 class="video-name">Video Title</h2>
+
               <p class="video-author">Channel Name</p>
-              <p class="video-metadata">
-                <span class="video-views">50.2K views</span>
-                <span class="video-time">week ago</span>
-              </p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
             </div>
-            <div class="video-menu-button"></div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
           </footer>
         </article>
-
+        
         <article class="video-card">
           <div class="video-preview"></div>
 
+          <div class="video-card-color"></div>
+
           <footer class="video-details">
             <div class="author-avatar"></div>
+
             <div class="video-info">
               <h2 class="video-name">Video Title</h2>
+
               <p class="video-author">Channel Name</p>
-              <p class="video-metadata">
-                <span class="video-views">50.2K views</span>
-                <span class="video-time">week ago</span>
-              </p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
             </div>
-            <div class="video-menu-button"></div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
           </footer>
         </article>
+        
+        <article class="video-card">
+          <div class="video-preview"></div>
+
+          <div class="video-card-color"></div>
+
+          <footer class="video-details">
+            <div class="author-avatar"></div>
+
+            <div class="video-info">
+              <h2 class="video-name">Video Title</h2>
+
+              <p class="video-author">Channel Name</p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
+            </div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </footer>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-preview"></div>
+
+          <div class="video-card-color"></div>
+
+          <footer class="video-details">
+            <div class="author-avatar"></div>
+
+            <div class="video-info">
+              <h2 class="video-name">Video Title</h2>
+
+              <p class="video-author">Channel Name</p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
+            </div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </footer>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-preview"></div>
+
+          <div class="video-card-color"></div>
+
+          <footer class="video-details">
+            <div class="author-avatar"></div>
+
+            <div class="video-info">
+              <h2 class="video-name">Video Title</h2>
+
+              <p class="video-author">Channel Name</p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
+            </div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </footer>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-preview"></div>
+
+          <div class="video-card-color"></div>
+
+          <footer class="video-details">
+            <div class="author-avatar"></div>
+
+            <div class="video-info">
+              <h2 class="video-name">Video Title</h2>
+
+              <p class="video-author">Channel Name</p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
+            </div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </footer>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-preview"></div>
+
+          <div class="video-card-color"></div>
+
+          <footer class="video-details">
+            <div class="author-avatar"></div>
+
+            <div class="video-info">
+              <h2 class="video-name">Video Title</h2>
+
+              <p class="video-author">Channel Name</p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
+            </div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </footer>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-preview"></div>
+
+          <div class="video-card-color"></div>
+
+          <footer class="video-details">
+            <div class="author-avatar"></div>
+
+            <div class="video-info">
+              <h2 class="video-name">Video Title</h2>
+
+              <p class="video-author">Channel Name</p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
+            </div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </footer>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-preview"></div>
+
+          <div class="video-card-color"></div>
+
+          <footer class="video-details">
+            <div class="author-avatar"></div>
+
+            <div class="video-info">
+              <h2 class="video-name">Video Title</h2>
+
+              <p class="video-author">Channel Name</p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
+            </div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </footer>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-preview"></div>
+
+          <div class="video-card-color"></div>
+
+          <footer class="video-details">
+            <div class="author-avatar"></div>
+
+            <div class="video-info">
+              <h2 class="video-name">Video Title</h2>
+
+              <p class="video-author">Channel Name</p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
+            </div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </footer>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-preview"></div>
+
+          <div class="video-card-color"></div>
+
+          <footer class="video-details">
+            <div class="author-avatar"></div>
+
+            <div class="video-info">
+              <h2 class="video-name">Video Title</h2>
+
+              <p class="video-author">Channel Name</p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
+            </div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </footer>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-preview"></div>
+
+          <div class="video-card-color"></div>
+
+          <footer class="video-details">
+            <div class="author-avatar"></div>
+
+            <div class="video-info">
+              <h2 class="video-name">Video Title</h2>
+
+              <p class="video-author">Channel Name</p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
+            </div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </footer>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-preview"></div>
+
+          <div class="video-card-color"></div>
+
+          <footer class="video-details">
+            <div class="author-avatar"></div>
+
+            <div class="video-info">
+              <h2 class="video-name">Video Title</h2>
+
+              <p class="video-author">Channel Name</p>
+
+              <p class="video-metadata">50.2K views • week ago</p>
+            </div>
+            <button class="video-button">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  focusable="false"
+                  aria-hidden="true"
+                  style="
+                    pointer-events: none;
+                    display: inherit;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <path
+                    d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </footer>
+        </article>
+
+        
+
       </section>
     </main>
   </body>
