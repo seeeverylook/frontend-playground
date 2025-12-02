@@ -7,28 +7,74 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <section class="seach-samples">
+    <section class="search-samples">
       <!--ya.ru search-->
       <article class="ya-search">
-        <form class="ya-search" action="">
-          <article class="ya-search-disabled">
-            <article class="ya-logo"></article>
+        <form class="ya-search-form" action="">
+          <article class="ya-logo"></article>
 
-            <span class="ya-placeholder">Найдётся всё</span>
+          <input
+            class="ya-search-input"
+            type="search"
+            placeholder="Найдётся всё"
+            aria-label="Поиск Яндекс"
+          />
 
-            <section class="icon-wrap">
-              <div class="icon keyboard" aria-label="Клавиатура"></div>
-              <div class="icon voice" aria-label="Голосовой поиск"></div>
-              <div class="icon camera" aria-label="Поиск с камерой"></div>
-            </section>
-          </article>
-
-          <input type="search" />
-          <section class="icon-wrap">
-            <div class="icon keyboard" aria-label="Клавиатура"></div>
-            <div class="icon voice" aria-label="Голосовой поиск"></div>
-            <div class="icon camera" aria-label="Поиск с камерой"></div>
-          </section>
+          <button class="icon keyboard" title="Клавиатура" aria-label="Клавиатура">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16.5 11.5h7c1.666 0 2.81.002 3.69.085.86.082 1.313.231 1.639.43a3.5 3.5 0 0 1 1.155 1.156c.2.326.349.78.43 1.638.084.881.086 2.025.086 3.691v3c0 1.666-.002 2.81-.085 3.69-.082.86-.231 1.313-.43 1.639a3.5 3.5 0 0 1-1.156 1.155c-.326.2-.78.349-1.638.43-.881.084-2.025.086-3.691.086h-7c-1.666 0-2.81-.002-3.69-.085-.86-.082-1.313-.231-1.639-.43a3.5 3.5 0 0 1-1.155-1.156c-.2-.326-.349-.78-.43-1.638-.084-.881-.086-2.025-.086-3.691v-3c0-1.666.002-2.81.085-3.69.082-.86.231-1.313.43-1.639a3.5 3.5 0 0 1 1.156-1.155c.326-.2.78-.349 1.638-.43.881-.084 2.025-.086 3.691-.086Zm-8.5 7c0-3.273 0-4.91.737-6.113a5 5 0 0 1 1.65-1.65C11.59 10 13.227 10 16.5 10h7c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C32 13.59 32 15.227 32 18.5v3c0 3.273 0 4.91-.737 6.113a5 5 0 0 1-1.65 1.65C28.41 30 26.773 30 23.5 30h-7c-3.273 0-4.91 0-6.113-.737a5 5 0 0 1-1.65-1.65C8 26.41 8 24.773 8 21.5v-3Zm8-2.5h-4v1.5h4V16Zm-4 4h3v1.5h-3V20Zm8-4h-3v1.5h3V16Zm-4 4h3v1.5h-3V20Zm8 5.5V24h-8v1.5h8ZM21 16h3v1.5h-3V16Zm2 4h-3v1.5h3V20Zm2-4h3v1.5h-3V16Zm3 4h-4v1.5h4V20Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+          <button class="icon voice" title="Голосовой поиск" aria-label="Голосовой поиск">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              width="36"
+              height="36"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M16 3.75a6 6 0 0 0-6 6v4.5a6 6 0 0 0 12 0v-4.5a6 6 0 0 0-6-6Zm4.5 10.5v-4.5a4.5 4.5 0 1 0-9 0v4.5a4.5 4.5 0 1 0 9 0Z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                fill="currentColor"
+                d="M15.25 24.222C10.078 23.84 6 19.521 6 14.25h1.5a8.5 8.5 0 0 0 17 0H26c0 5.27-4.078 9.589-9.25 9.972v4.028h-1.5v-4.028Z"
+              ></path>
+            </svg>
+          </button>
+          <button class="icon camera" title="Поиск с камерой" aria-label="Поиск с камерой">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              fill="none"
+              viewBox="0 0 40 40"
+            >
+              <path
+                fill="currentColor"
+                d="m25.3 13.229.392.776.524.21c1.88.756 2.459 1.012 2.87 1.381a3.5 3.5 0 0 1 .953 1.41c.169.464.204 1.267.21 2.817h1.5c-.003-1.511-.033-2.595-.3-3.33a5 5 0 0 0-1.361-2.013c-.656-.588-1.541-.944-3.312-1.657l-.138-.272c-.754-1.488-1.13-2.232-1.72-2.744a4.002 4.002 0 0 0-1.121-.69c-.724-.294-1.558-.294-3.226-.294h-1.119c-1.677 0-2.515 0-3.242.297a4 4 0 0 0-1.125.695c-.59.518-.965 1.268-1.715 2.767l-.12.241c-1.788.716-2.682 1.073-3.342 1.667a5 5 0 0 0-1.352 1.997c-.27.736-.302 1.824-.306 3.337h1.5c.007-1.55.043-2.356.214-2.82a3.5 3.5 0 0 1 .946-1.399c.415-.372 1-.63 2.897-1.389l.53-.212.375-.75c.807-1.615 1.046-2.034 1.362-2.31.209-.184.446-.33.703-.435.39-.159.87-.186 2.675-.186h1.12c1.794 0 2.273.027 2.66.184.256.104.493.25.701.43.316.276.555.69 1.366 2.292ZM31.75 23.677h-1.5c-.003 1.27-.015 1.948-.085 2.69-.082.86-.231 1.312-.43 1.638a3.5 3.5 0 0 1-1.156 1.156c-.326.2-.78.348-1.638.43-.881.084-2.025.085-3.691.085H22v1.5h1.25c3.273 0 4.91 0 6.112-.736a5 5 0 0 0 1.651-1.651c.678-1.107.732-2.332.736-5.113ZM18 31.177v-1.5h-1.25c-1.666 0-2.81-.002-3.69-.086-.86-.082-1.313-.23-1.639-.43a3.5 3.5 0 0 1-1.155-1.156c-.2-.326-.349-.779-.43-1.638-.071-.742-.083-1.42-.086-2.69h-1.5c.005 2.78.059 4.005.737 5.112a5 5 0 0 0 1.65 1.65c1.203.738 2.84.738 6.113.738H18Z"
+              ></path>
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M26.51 21.168a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Zm-1.5 0a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
         </form>
 
         <section class="ya-information">
@@ -40,5 +86,8 @@
         </section>
       </article>
     </section>
+
+    <script src="/js/components/logo-hide.js"></script>
+    <script src="/js/components/style-changer.js"></script>
   </body>
 </html>
