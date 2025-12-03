@@ -46,7 +46,6 @@ body {
   height: 65px;
 }
 
-
 .ya-logo {
   min-height: 48px;
   min-width: 48px;
@@ -57,37 +56,48 @@ body {
   margin-left: 8px;
 }
 
-.icon {
+.ya-submit {
+  aspect-ratio: 1;
+  height: 45px;
+  padding: 0;
+  color: #f8604a;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.ya-icon {
   background-color: transparent;
   border: none;
   display: flex;
   align-items: center;
 }
 
-.keyboard,
-.voice,
-.camera {
+.ya-keyboard,
+.ya-voice,
+.ya-camera,
+.ya-clear {
   height: 48px;
   width: 48px;
   color: var(--ya-icon-color);
 }
 
-.keyboard,
-.camera {
+.ya-keyboard,
+.ya-camera {
   padding: 0;
 }
 
-.camera {
+.ya-camera {
   margin-right: 15px;
 }
 
-.keyboard:hover,
-.voice:hover,
-.camera:hover {
+.ya-keyboard:hover,
+.ya-voice:hover,
+.ya-camera:hover,
+.ya-clear:hover {
   color: var(--ya-hover);
 }
 
-.keyboard {
+.ya-keyboard {
   display: none;
 }
 
@@ -123,6 +133,44 @@ body {
   text-align: left;
 }
 
-.ya-search-input:focus + .keyboard {
+.ya-search-input:focus ~ .ya-keyboard {
   display: flex;
+}
+
+.ya-search-input:focus ~ .ya-logo {
+  display: none;
+}
+
+/* Order Section */
+
+.ya-logo {
+  order: 0;
+}
+
+.ya-search-input {
+  order: 1;
+}
+
+.ya-keyboard {
+  order: 2;
+}
+
+.ya-voice {
+  order: 3;
+}
+
+.ya-camera {
+  order: 4;
+}
+
+.ya-clear {
+  order: 5;
+}
+
+.ya-submit {
+  order: 6;
+}
+
+.ya-clear, .ya-submit {
+  display: none;
 }

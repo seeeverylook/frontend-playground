@@ -11,8 +11,6 @@
       <!--ya.ru search-->
       <article class="ya-search">
         <form class="ya-search-form" action="">
-          <article class="ya-logo"></article>
-
           <input
             class="ya-search-input"
             type="search"
@@ -20,8 +18,10 @@
             aria-label="Поиск Яндекс"
           />
 
+          <article class="ya-logo"></article>
+
           <button
-            class="icon keyboard"
+            class="ya-icon ya-keyboard"
             title="Клавиатура"
             aria-label="Клавиатура"
           >
@@ -41,7 +41,8 @@
             </svg>
           </button>
           <button
-            class="icon voice"
+            type="button"
+            class="ya-icon ya-voice"
             title="Голосовой поиск"
             aria-label="Голосовой поиск"
           >
@@ -64,8 +65,9 @@
             </svg>
           </button>
           <button
-            class="icon camera"
-            title="Голосовой поиск"
+            type="button"
+            class="ya-icon ya-camera"
+            title="Поиск с камерой"
             aria-label="Поиск с камерой"
           >
             <svg
@@ -87,6 +89,46 @@
               ></path>
             </svg>
           </button>
+
+          <button
+            type="button"
+            class="ya-icon ya-clear"
+            title="Очистить поисковой запрос"
+            aria-label="Очистить поисковой запрос"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              class="search3__svg_clear"
+            >
+              <path
+                fill="currentColor"
+                d="m21.06 20 7.97 7.97-1.06 1.06L20 21.06l-7.97 7.97-1.06-1.06L18.94 20l-7.97-7.97 1.06-1.06L20 18.94l7.97-7.97 1.06 1.06L21.06 20Z"
+              ></path>
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="ya-icon ya-submit"
+            aria-label="Отправить поисковой запрос"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 34 34"
+              fill="none"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M17 33C8.163 33 1 25.837 1 17S8.163 1 17 1s16 7.163 16 16-7.163 16-16 16Zm2-16-6.4-8H17l6.4 8-6.4 8h-4.4l6.4-8Z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
         </form>
 
         <section class="ya-information">
@@ -98,7 +140,7 @@
         </section>
       </article>
     </section>
-    <script src="/js/components/logo-hide.js"></script>
-    <script src="/js/components/style-changer.js"></script>
+    <script src="/js/components/yandex-style-changer.js"></script>
+    <script src="/js/components/yandex-search.js"></script>
   </body>
 </html>
