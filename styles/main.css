@@ -4,149 +4,131 @@
   box-sizing: border-box;
 }
 
-:root {
-  --background-color-main: #000000;
-  --background-card-color-main: #ffffff;
-  --border-color-main: #cacaca;
-  --text-color-main: #000000;
-  --text-color-button: #ffffff;
-  --text-color-disabled: #cacaca;
-  --google-blue: #4285f4;
-
-  --font-size-main: 14px;
-}
-
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
-  font-size: var(--font-size-main);
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+
+  font-variation-settings:
+    "wght" 500,
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
 }
 
-html,
-body {
-  height: 100%;
-  background: var(--background-color-main);
+
+:root {
+  --blue-background: #e3f2fd;
+  --green-background: #e8f5e9;
+  --red-background: #ffebee;
+
+  --text-color: #1f1f1f;
+
+  --text-large: 48px;
+  --text-small: 16px;
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0;
 }
 
-.container {
-  border: 2px solid var(--border-color-main);
-  border-radius: 12px;
-  width: min-content;
+.project-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   padding: 25px;
-  background: var(--background-card-color-main);
+  gap: 25px;
+  align-content: start;
+  height: 100vh;
 }
 
-.to-do {
+
+.project {
   display: grid;
-  grid-template-columns: none;
-  grid-column: auto;
-  gap: 5px;
-}
-
-.form-eating {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.row-label {
-  margin: 0;
-}
-
-.favorite-food {
-  width: 100%;
-}
-
-#name-drink {
-  min-height: 100px;
-}
-
-#disabled {
-  color: var(--text-color-disabled);
-}
-
-.input {
-  max-height: 15vh;
-  max-width: 100vh;
-  min-width: 550px;
-  width: 100%;
-  border: 2px solid var(--border-color-main);
-  border-radius: 12px;
-  padding: 10px 15px;
-  background-color: transparent;
-  color: var(--text-color-main);
-  font-size: var(--font-size-main);
-  font-weight: 400;
-  font-family: inherit;
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 10px 0 20px 0px;
-}
-
-.button-container {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.button {
-  width: 50px;
-  height: 50px;
-  border: 2px solid var(--border-color-main);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-}
-
-.button svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.submit-button {
-  max-height: 15vh;
-  max-width: 100vh;
-  border-radius: 12px;
-  padding: 10px 15px;
-  border: none;
-  background: var(--google-blue);
-  color: var(--text-color-button);
+  border-radius: 48px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-  font-size: var(--font-size-main);
-  font-family: inherit;
-  font-weight: 400;
+  text-decoration: none;
+
+  transition: font-variation-settings 500ms ease, background-color 500ms ease;
 }
 
-@media (max-width: 1080px) {
-  .form-eating {
-    display: grid;
-    grid-template-columns: none;
-    grid-column: auto;
-    gap: 5px;
-  }
+.to-do:hover {
+  font-variation-settings:
+    "wght" 800,
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
 
-  .input {
-    max-height: 10vh;
-    max-width: 60vh;
-    min-width: 340px;
-  }
+  background-color: var(--blue-background);
+}
+
+.search:hover {
+  font-variation-settings:
+    "wght" 800,
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+
+  background-color: var(--green-background);
+}
+
+.youtube:hover {
+  font-variation-settings:
+    "wght" 800,
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+  background-color: var(--red-background);
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 40px;
+}
+
+.head {
+  color: var(--text-color);
+  font-size: var(--text-large);
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.description {
+  color: var(--text-color);
+  font-size: var(--text-small);
+  margin-top: 0px;
 }
