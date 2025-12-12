@@ -37,3 +37,27 @@ let userNumber =
     : "Вы не ввели число!";
 
 alert(userNumber);
+
+let result;
+result = a + b < 4 ? "мало" : "много";
+alert(result);
+
+let message;
+if (login == "Сотрудник") {
+  message = "Привет";
+} else if (login == "Директор") {
+  message = "Здравствуйте";
+} else if (login == "") {
+  message = "Нет логина";
+} else {
+  message = "";
+}
+
+let anotherMessage =
+  anotherlogin == "Сотрудник"
+    ? "Привет"
+    : anotherlogin == "Директор"
+    ? "Здравствуйте"
+    : anotherlogin == ""
+    ? "Нет логина"
+    : "";
