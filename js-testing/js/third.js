@@ -61,3 +61,24 @@ let anotherMessage =
     : anotherlogin == ""
     ? "Нет логина"
     : "";
+
+let age;
+let negativeAge;
+let superNegativeAge;
+
+// Диапазон от 14 до 90 включительно
+if (age >= 14 && age <= 90) {
+  alert(age);
+}
+
+// Негативный результат диапазона
+// Все остальное но, не диапазон от 14 до 90 включительно
+if (!(negativeAge >= 14 && negativeAge <= 90)) {
+  alert(negativeAge);
+}
+
+// Негативный результат диапазона (без оператора НЕ "!")
+// Все остальное но, не диапазон от 14 до 90 включительно
+if (superNegativeAge < 14 || superNegativeAge > 90) {
+  alert(superNegativeAge);
+}
