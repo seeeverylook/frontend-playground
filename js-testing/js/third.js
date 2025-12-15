@@ -1,3 +1,5 @@
+/*
+
 let answer = prompt("Какое «официальное» название JavaScript?", "");
 
 if (answer == "ECMAScript") {
@@ -119,3 +121,121 @@ if (login == "Админ") {
 } else {
   alert("Я вас не знаю");
 }
+
+
+// Операторы нулевого слияния и присваивания "??" и "??="
+
+alert(undefined ?? NaN ?? null ?? "" ?? " ");
+
+// Оператор нулевого слияния (??) возвращает первое значение,
+// которое не равно null/undefined.
+// Проверка выполняется слева направо.
+//
+// В данном случае:
+// undefined — игнорируется
+// NaN — не является null или undefined, 
+// поэтому именно оно возвращается первым
+//
+// В результате будет выведено: NaN
+
+let city = null;
+
+city ??= "Берлин";
+city ??= null;
+city ??= "Кёльн";
+city ??= "Гамбург";
+
+alert(city);
+
+// Оператор нулевого слияния возвращает первое значение,
+// которое не является null/undefined.
+//
+// В данном случае, первым значением будет являться "Берлин".
+// Потому что, изначально city приравнена к null,
+// поэтому при первом ??= ей присваивается "Берлин".
+// После этого city содержит непустое значение,
+// и все последующие операции ??= игнорируются.
+
+let num1 = 10,
+  num2= 20,
+  newResult;
+
+// или можно по строчно
+
+// let num1 = 10;
+// let num2 = 20;
+// let newResult;
+
+if (newResult === null || newResult === undefined) { // Если newResult равен null или undefined
+  if (num1 !== null && num1 !== undefined) { // Если num1 не равен null и undefined
+    newResult = num1; // то - newResult равен num1
+  } else {
+    newResult = num2; // в противном случае - newResult равен num2
+  }
+}
+
+// Через Оператора нулевого присваивания
+
+let newNum1 = 10,
+  newNum2= 20,
+  superNewResult;
+
+// или можно по строчно
+
+// let newNum1 = 10;
+// let newNum2= 20;
+// let superNewResult;
+
+superNewResult ??= newNum1;
+superNewResult ??= newNum2;
+
+// или 
+
+superNewResult ??= newNum1 ?? newNum2;
+
+*/
+
+// Циклы while/for
+
+/*
+
+let walls = 20;
+while (walls) {
+  console.log(walls);
+  walls--;
+}
+
+let walls2 = 2;
+while (walls2 <= 20) console.log(walls2++);
+
+// do используется для того чтобы прошла хотя бы одна итерация
+let roof = 0;
+do {
+  console.log(roof);
+  roof++;
+} while (roof <= 30);
+
+// можно объявить переменную до цикла
+let y;
+
+for (y = 0; y <= 20; y++) { // (начало; условие; шаг)
+  alert(y);
+}
+
+alert(y);
+
+// можно не присваивать значение переменной в цикле, если это было сделано перед ним
+let x = 0;
+
+for (; x <= 20; x++) { // (начало; условие; шаг)
+  alert(x);
+}
+
+alert(x);
+
+// можно объявить переменную в самом цикле
+for (let u = 0; u < 20; u++) { // (начало; условие; шаг) +
+  alert(u);
+}
+
+*/
