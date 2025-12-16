@@ -7,10 +7,10 @@ admin = authorName;
 
 // Иная интерпретация
 
-// let admin, name;
-// name = "Джон";
+// let admin, authorName;
+// name = "Макс";
 
-// admin = name;
+// admin = authorName;
 
 // alert(admin)
 
